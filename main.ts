@@ -1,20 +1,6 @@
 basic.forever(function () {
-    basic.showLeds(`
-        . . # . .
-        . # . . .
-        # # # # #
-        . # . . .
-        . . # . .
-        `)
-    basic.showLeds(`
-        # . . . .
-        . . . . .
-        # # # . .
-        . . . . .
-        # . . . .
-        `)
-    basic.clearScreen()
-    if (pins.analogReadPin(AnalogPin.P1) > 500) {
+    basic.showIcon(IconNames.Asleep)
+    if (pins.analogReadPin(AnalogPin.P1) > 400) {
         for (let index = 0; index < 2; index++) {
             basic.showIcon(IconNames.Heart)
             pins.servoWritePin(AnalogPin.P0, 110)
@@ -33,20 +19,6 @@ basic.forever(function () {
             `)
         basic.showIcon(IconNames.Happy)
     } else {
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . #
-            . . . . .
-            . . . . .
-            `)
-        basic.showLeds(`
-            . . . . #
-            . . . # .
-            . . # # #
-            . . . # .
-            . . . . #
-            `)
         pins.servoWritePin(AnalogPin.P0, 0)
     }
 })
