@@ -3,10 +3,10 @@ basic.forever(function () {
     if (pins.analogReadPin(AnalogPin.P1) > 450) {
         for (let index = 0; index < 2; index++) {
             basic.showIcon(IconNames.Surprised)
-            pins.servoWritePin(AnalogPin.P0, 110)
-            basic.pause(100)
+            pins.servoWritePin(AnalogPin.P0, 100)
+            basic.pause(500)
             pins.servoWritePin(AnalogPin.P0, 0)
-            basic.pause(100)
+            basic.pause(500)
         }
         basic.clearScreen()
         basic.showIcon(IconNames.Happy)
