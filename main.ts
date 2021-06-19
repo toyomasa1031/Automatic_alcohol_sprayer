@@ -5,7 +5,6 @@ input.onButtonPressed(Button.A, function () {
         pins.servoWritePin(AnalogPin.P0, 0)
         basic.pause(500)
     }
-    music.startMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once)
     basic.showString("OK!")
 })
 input.onButtonPressed(Button.B, function () {
@@ -27,9 +26,6 @@ basic.forever(function () {
             # . . . #
             . # # # .
             `)
-        music.playTone(523, music.beat(BeatFraction.Quarter))
-        music.playTone(659, music.beat(BeatFraction.Quarter))
-        music.playTone(784, music.beat(BeatFraction.Quarter))
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Asleep)
