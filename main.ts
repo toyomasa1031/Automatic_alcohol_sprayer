@@ -1,9 +1,9 @@
 input.onButtonPressed(Button.A, function () {
     for (let index = 0; index < 5; index++) {
-        pins.servoWritePin(AnalogPin.P0, 80)
-        basic.pause(500)
+        pins.servoWritePin(AnalogPin.P0, 90)
+        basic.pause(1000)
         pins.servoWritePin(AnalogPin.P0, 0)
-        basic.pause(500)
+        basic.pause(1000)
     }
     basic.showString("OK!")
 })
@@ -15,7 +15,7 @@ basic.forever(function () {
     basic.showIcon(IconNames.Asleep)
     if (pins.analogReadPin(AnalogPin.P1) > 500) {
         basic.showIcon(IconNames.Heart)
-        pins.servoWritePin(AnalogPin.P0, 80)
+        pins.servoWritePin(AnalogPin.P0, 90)
         basic.pause(1000)
         pins.servoWritePin(AnalogPin.P0, 0)
         basic.showIcon(IconNames.Happy)
